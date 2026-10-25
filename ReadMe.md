@@ -25,13 +25,9 @@
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
-- [Architecture](#-architecture)
-- [Technology Stack](#-technology-stack)
 - [Installation & Setup](#-installation--setup)
 - [API Documentation](#-api-documentation)
 - [Project Structure](#-project-structure)
-- [Development Guidelines](#-development-guidelines)
-- [License](#-license)
 
 ## 🔍 Overview
 
@@ -73,40 +69,7 @@ The system integrates multiple fact-checking services and employs sophisticated 
 - URL submission for immediate analysis
 - Streamlined navigation between visualization components
 
-## 🏛️ Architecture
-
-Credleaf consists of four main components:
-
-1. **Landing Page**: The entry point where users can submit URLs for analysis
-2. **Time Series Visualization**: Displays temporal data related to vaccine publications with interactive charts
-3. **Network Graph Visualization**: Shows relationships between concepts using interactive node-based networks
-4. **Fact-Checking API**: Backend service that aggregates trust scores and provides comprehensive analysis
-
-## 🛠️ Technology Stack
-
-### Frontend Technologies
-
-- **[vis.js](https://visjs.github.io/vis-network/)**: Network visualization library for interactive graph networks
-- **[Chart.js](https://www.chartjs.org/)**: Library for responsive interactive charts and graphs
-- **[Tom Select](https://tom-select.js.org/)**: Enhanced select elements for improved user experience
-
-### Backend Technologies
-
-- **[Python](https://www.python.org/)**: Core programming language
-- **[Flask](https://flask.palletsprojects.com/)**: Web framework for the API
-- **[NetworkX](https://networkx.org/)**: Python library for graph network operations
-- **[Ollama Embeddings](https://ollama.com/)**: Advanced embedding technology for semantic search
-- **[Requests](https://docs.python-requests.org/)**: HTTP library for external API integration
-
 ## 🚀 Installation & Setup
-
-### Prerequisites
-
-- Python 3.8+
-- Node.js 14+ (for development tools)
-- Git
-
-### Step-by-Step Installation
 
 1. **Clone the repository**
 
@@ -164,11 +127,6 @@ Credleaf consists of four main components:
    python -m http.server 8000
    ```
 
-7. **Access the application**
-   ```
-   http://localhost:8000/Landing%20page/index.html
-   ```
-
 ### Graph Data Generation
 
 To generate new graph data:
@@ -187,33 +145,6 @@ python generate_graph.py --input <path-to-data> --output <output-path>
 | `/factcheck` | POST   | Submit a claim for fact-checking analysis |
 | `/health`    | GET    | Check API status and available services   |
 
-### Example Request
-
-```json
-POST /factcheck
-Content-Type: application/json
-
-{
-  "claim": "The claim text to be fact-checked",
-  "temporal_weight": 1.0,
-  "semantic_weight": 1.0,
-  "graph_weight": 1.0,
-  "reference_data": {
-    "reference_text": "Text to compare semantic alignment with"
-  },
-  "graph_data": {
-    "nodes": [
-      {"id": "claim_id", "attributes": {"label": "Claim Node"}},
-      {"id": "node2", "attributes": {"label": "Related Node"}}
-    ],
-    "edges": [
-      {"source": "claim_id", "target": "node2", "weight": 0.8}
-    ]
-  },
-  "claim_id": "unique_id",
-  "claim_date": "2023-04-15"
-}
-```
 
 ### Example Response
 
@@ -271,31 +202,8 @@ Front-end/
         time-series.html    # Time series visualization of vaccine publication data
 ```
 
-## 💻 Development Guidelines
-
-When contributing to the Credleaf project, please follow these guidelines:
-
-1. **Graph Data Management**: All graph data is defined in `graph-data.js` including nodes, edges, and properties
-2. **Time Series Data**: Time series data is embedded directly in `time-series.html`
-3. **Event Handling**: Node selection and highlighting is managed in `graph-highlight.js`
-4. **Filtering Logic**: All filtering functionality is contained in `graph-filter.js`
-5. **Graph Configuration**: All initialization and configuration is in `graph-init.js`
-6. **API Development**: Fact-checking API logic is contained in `api.py`
-
-### Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by the Credleaf Team</sub>
+  <sub>Built with 🌿 by the Credleaf Team</sub>
 </div>
