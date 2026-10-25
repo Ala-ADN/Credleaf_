@@ -1,13 +1,8 @@
-# Credleaf
 
 <div align="center">
 
 <img
    src="Front-end/Landing%20page/logo.svg" alt="Credleaf Logo" width="400"/>
-
-  <br>
-
-  <br>
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
